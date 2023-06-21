@@ -1,0 +1,20 @@
+version: "3"
+services:
+  postgres:
+    container_name: crypto_pairs_nest
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - crypto_pairs_nest:/data/postgres
+    env_file:
+      - docker.env
+    networks:
+      - crypto_pairs_nest
+
+networks:
+  crypto_pairs_nest:
+    driver: bridge
+
+volumes:
+  crypto_pairs_nest:
