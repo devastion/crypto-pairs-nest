@@ -11,13 +11,13 @@ datasource db {
 }
 
 model BTCUSD {
-  id    Int   @id @default(autoincrement())
-  price Float
-  time  Int
+  id    Int      @id @default(autoincrement())
+  price String
+  time  DateTime
 }
 
 model ETHUSD {
-  id    Int   @id @default(autoincrement())
-  price Float
-  time  Int
+  id    Int      @id @default(autoincrement())
+  price String
+  time  DateTime
 }
