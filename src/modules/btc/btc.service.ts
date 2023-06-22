@@ -26,8 +26,8 @@ export class BTCUSDService {
     return this.prisma.bTCUSD.findMany({ orderBy });
   }
 
-  // 12:45 everyday
-  @Cron("45 12 * * *")
+  // every minute
+  @Cron("* * * * *")
   async handleCron() {
     const fetchData = await axios.get(
       "https://api.coincap.io/v2/assets/bitcoin",
